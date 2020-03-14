@@ -20,8 +20,9 @@ export default function App() {
     if(text.length > 3){
       setTodos((prevTodos) => {
         return [
-          ...prevTodos,
-          {text: text, key: Math.random().toString()}   // because the app is so small, it is acceptable for now !
+          // ...prevTodos,
+          {text: text, key: Math.random().toString()},   // because the app is so small, it is acceptable for now !
+          ...prevTodos,                                     // now the new todos go to the top of the list !!!!!
         ]
       })
     }else{
