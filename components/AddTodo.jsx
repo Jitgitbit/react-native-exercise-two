@@ -3,7 +3,11 @@ import { View, Text, StyleSheet, TouchableOpacity, TextInput, Button} from 'reac
 
 export default function AddTodo({submitHandler}) { 
   const [text, setText] = useState('');
-  const changeHandler = () => {} 
+
+  const changeHandler = (val) => {
+    setText(val)
+  } 
+  
   return (
     <View>
       <TextInput
