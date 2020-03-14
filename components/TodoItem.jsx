@@ -7,7 +7,7 @@ export default function TodoItem({item, pressHandler}) {    //item passed as pro
     <TouchableOpacity onPress={() => pressHandler(item.key)}>
       <View style={styles.item}>
         <MaterialIcons name='delete' size={18} color='#333'/>
-        <Text>{item.text}</Text>
+        <Text style={styles.itemText}>{item.text}</Text>
       </View>
     </TouchableOpacity>
   )
@@ -23,5 +23,8 @@ const styles = StyleSheet.create({
     borderRadius:10,
     backgroundColor:'lightcyan',
     flexDirection:'row',
+  },
+  itemText:{
+    marginLeft:20,
   }
 })
