@@ -10,7 +10,7 @@ export default function AddTodo() {
       style={styles.input}
       placeholder='new todo...'
       onChangeText={changeHandler}/>
-      <Button onPress={} text='add todo' color='coral'/>
+      <Button onPress={() => console.log(`what is the state now:`,text)} text='add todo' color='coral'/>
     </View>
   )
 }
