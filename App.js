@@ -65,7 +65,6 @@ const styles = StyleSheet.create({
   },
   list: {
     marginTop: 20,
-    backgroundColor:'lightcyan',
     flex:1
   }
 });
