@@ -16,7 +16,7 @@ export default function App() {
       return prevTodos.filter( todo => todo.key !== key)
     })
   }
-  const submitHandler = () => {
+  const submitHandler = (text) => {
     setTodos((prevTodos) => {
       return [
         ...prevTodos,
