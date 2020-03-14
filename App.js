@@ -16,11 +16,20 @@ export default function App() {
       return prevTodos.filter( todo => todo.key !== key)
     })
   }
+  const submitHandler = () => {
+    setTodos((prevTodos) => {
+      return [
+        ...prevTodos,
+        {text: text, key: Math.random().toString()}   // because the app is so small, it is acceptable for now !
+      ]
+    })
+  }
+
   return (
     <View style={styles.container}>
       <Header/>
       <View style={styles.content}>
-        <AddTodo/>
+        <AddTodo submitHandler={submitHandler}/>
         <View style={styles.list}>
           <FlatList
           data={todos}
